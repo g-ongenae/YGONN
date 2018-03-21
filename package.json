@@ -1,0 +1,23 @@
+{
+  "name": "ygonn",
+  "version": "1.0.0",
+  "description": "Yu gi oh cards neural network",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "yugioh",
+    "cards",
+    "cnn"
+  ],
+  "author": "Yann Dubois",
+  "license": "ISC",
+  "dependencies": {
+    "brain": "^1.0.0",
+    "brain.js": "^1.1.2",
+    "get-pixels": "^3.3.0",
+    "jpeg-js": "^0.3.3",
+    "request": "^2.85.0"
+  }
+}
