@@ -60,8 +60,7 @@ const training = async function(nbTrain, cards) {
     }
   }
   
-  const res = net.train(testSet);
-  console.log("Training result:", res);
+  return net.train(testSet);
 }
 
 const check = async function(n, cards) {
@@ -87,9 +86,16 @@ const check = async function(n, cards) {
 }
 
 const main = async function() {
+  console.log("Fecthing list of cards");
   const allCards = (await listAllCard()).cards;
-  await training(200, allCards);
-  await check(10, allCards);
+  console.log("List fetched, beginning trainning");
+  const res = await training(200, allCards);
+  console.log("Training result:", res);
+  if (res.error < 0.5) {
+    await check(10, allCards);
+  } else {
+    console.log("BrainJS couldn't make sense of the data");
+  }
 }
 
 main();
