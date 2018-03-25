@@ -4,6 +4,7 @@
   "description": "Yu gi oh cards neural network",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -19,5 +20,9 @@
     "get-pixels": "^3.3.0",
     "jpeg-js": "^0.3.3",
     "request": "^2.85.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:YannDub/YGONN.git"
   }
 }
